@@ -1,4 +1,4 @@
-# Problem Brief Coach
+# Problem Brief
 
 A Claude Code skill for product designers who have observations, concerns, or hunches worth surfacing — but not the time to structure them into something shareable.
 
@@ -12,15 +12,21 @@ Ideas stay fuzzy, stay in your head, or get lost before they reach anyone who ca
 
 This skill collapses that gap. You dump what you know in rough form — fragments, anecdotes, Slack threads, half-formed hunches — and it helps you shape it into a **discovery proposal**: a lightweight, shareable doc that can start a product or roadmap conversation before anyone asks you to.
 
-Strategic partnership starts before any tool is open. It starts with getting an idea clear enough that other people can care about it.
+Strategic partnership starts before any tool is open. It starts with getting an idea clear enough that other people can care about it. This is the method for making that count — on any project, in any sprint, any time you notice something worth solving.
 
 ---
 
 ## What it produces
 
-A v0 problem brief — a Google Doc-style memo a PM, design manager, or collaborator can read in two minutes and react to. It's intentionally incomplete. The goal is to earn a conversation, not close one.
+A v0 problem brief — a Google Doc-style memo a PM, design manager, or collaborator can read in two minutes and react to. Five sections:
 
-The brief separates problem framing from solution brainstorming by design. It's upstream of a PRD, upstream of a product request form, upstream of a roadmap commit. It's the document that argues a problem is worth investigating at all.
+1. **The problem** — described through the user's experience, not their demographic category. This is where design's proximity to users shows up.
+2. **Why it matters** — which metric it most likely touches, what gets worse if nothing changes.
+3. **What we know** — evidence labeled by confidence, what's been tried, what's still unknown.
+4. **Why now** — the specific timing hook.
+5. **Proposed next step** — an action already in motion and the decision this conversation needs to produce.
+
+The brief is intentionally incomplete. The goal is to earn a conversation, not close one.
 
 ---
 
@@ -33,13 +39,13 @@ The brief separates problem framing from solution brainstorming by design. It's 
 | **Requires** | A signal worth exploring | A solution direction | Full scope and metrics |
 | **Goal** | Start a conversation | Route a request | Document what's being built |
 
-A product request form assumes you're done thinking and submitting to a queue. A PRD assumes the problem is already agreed on. A problem brief is for when you've noticed something but haven't been asked to act on it yet.
+A product request form assumes you're done thinking and submitting to a queue. A PRD assumes the problem is already agreed on. A problem brief is for when you've noticed something but haven't been asked to act on it yet — and you want to shape the conversation before it happens without you.
 
 ---
 
-## What the AI doesn't know
+## What the skill doesn't know
 
-The skill helps you think — it doesn't know your organization. Who the right first reader is, what your PM is currently prioritizing, which problems have already been deprioritized and why — that judgment stays with you. The brief gets your thinking out; you decide where it goes.
+It helps you think — it doesn't know your organization. Who the right first reader is, what your PM is currently prioritizing, which problems have already been deprioritized and why — that judgment stays with you. The brief gets your thinking out; you decide where it goes.
 
 ---
 
@@ -54,17 +60,17 @@ The skill helps you think — it doesn't know your organization. Who the right f
 Clone this repo:
 
 ```bash
-git clone https://github.com/gasperchan/problem-brief-coach.git
-cd problem-brief-coach
+git clone https://github.com/gasperchan/problem-brief.git
+cd problem-brief
 ```
 
-Open the `problem-brief-coach` directory as your Claude Code project. The skill loads automatically from `SKILL.md`.
+Open the `problem-brief` directory as your Claude Code project. The skill loads automatically from `SKILL.md` in the project root.
 
-To make it available globally (across all projects), copy the skill file to your Claude user skills directory:
+To make it available globally across all projects, copy the skill to your Claude user directory:
 
 ```bash
-mkdir -p ~/.claude/skills/problem-brief-coach
-cp SKILL.md ~/.claude/skills/problem-brief-coach/SKILL.md
+mkdir -p ~/.claude/skills/problem-brief
+cp SKILL.md ~/.claude/skills/problem-brief/SKILL.md
 ```
 
 ### Run it
@@ -72,7 +78,7 @@ cp SKILL.md ~/.claude/skills/problem-brief-coach/SKILL.md
 In Claude Code, type:
 
 ```
-/problem-brief-coach
+/problem-brief
 ```
 
 Start with a rough thought dump. Fragments, bullets, Slack screenshots, PRD links — all fine.
@@ -81,7 +87,7 @@ Start with a rough thought dump. Fragments, bullets, Slack screenshots, PRD link
 
 ## Export to Google Docs
 
-Once a brief is drafted, the skill offers to export it directly to Google Docs and return a shareable link.
+Once a brief is drafted, the skill offers to export it directly to Google Docs and return a shareable link. Briefs are saved to the `briefs/` directory, which is gitignored so nothing gets accidentally committed.
 
 ### Option A: Google Cloud setup (recommended)
 
@@ -90,14 +96,14 @@ One-time setup, then it's one command.
 1. Go to [Google Cloud Console](https://console.cloud.google.com) and create a project.
 2. Enable the **Google Docs API** and **Google Drive API** for that project.
 3. Under **APIs & Services → Credentials**, create an OAuth 2.0 Client ID (type: Desktop app). Download the JSON.
-4. Rename the downloaded file `credentials.json` and place it in this directory (next to `SKILL.md`).
+4. Rename the file `credentials.json` and place it in this directory (next to `SKILL.md`).
 5. Install the Python dependencies:
 
 ```bash
 pip3 install google-api-python-client google-auth-httplib2 google-auth-oauthlib
 ```
 
-6. The first export will open a browser for Google authorization. After that, credentials are cached at `~/.problem-brief-coach-token.json` — no further auth needed.
+The first export will open a browser for Google authorization. After that, credentials are cached at `~/.problem-brief-token.json` — no further auth needed.
 
 ### Option B: Pandoc (fallback)
 
@@ -107,7 +113,7 @@ If Google Cloud setup isn't working, export to `.docx` and drag it into Google D
 brew install pandoc
 ```
 
-Then ask the skill to export via pandoc. It will save a `.docx` file locally that Google Drive opens natively.
+Ask the skill to export via pandoc. It will save a `.docx` file to `briefs/` that Google Drive opens natively.
 
 ---
 
@@ -119,4 +125,4 @@ If your problem involves clinical outcomes, member safety, or care delivery, the
 
 ## Contributing
 
-This skill was built for product designers at a mental healthtech company and is designed to be shared. If you use it, adapt it, or find gaps — open an issue or PR.
+Built for product designers at a mental healthtech company, designed to be shared. If you use it, adapt it, or find gaps — open an issue or PR.
