@@ -179,8 +179,8 @@ Return:
 3. A nudge toward sharing: who's a good first reader and how to frame the ask.
 
 After returning the gate feedback, offer to export the brief directly to Google Docs. Use the working title from the brief to name the file (kebab-case, e.g. `provider-invoice-notification-gap.md`). If the user agrees:
-1. Write the brief as a markdown file to the current working directory.
-2. Run `python3 export_to_gdocs.py [filename].md` from the problem-brief-coach directory via Bash.
+1. Write the brief as a markdown file to the `briefs/` subdirectory (e.g. `briefs/provider-invoice-notification-gap.md`).
+2. Run `python3 export_to_gdocs.py briefs/[filename].md` from the problem-brief-coach directory via Bash.
 3. The script will return a Google Docs URL — share it with the user.
 
 First-time setup: the script requires a `credentials.json` file from Google Cloud. If it's missing, tell the user to check the README for setup instructions. On first successful run, credentials are cached and no further auth is needed.
