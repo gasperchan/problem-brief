@@ -72,26 +72,13 @@ Ask for:
 - Support tickets, ops reports, or stakeholder observations
 - Behavioral or funnel metrics, if any are already visible
 - What's been tried before, if anything, and what happened
+- Counterevidence or reasons this might not be a priority
 
 ### Cluster C: influence goal
-Use when the ask is unclear.
-
-Ask what conversation the designer wants to create:
-- Align PM that the problem is worth discovery
-- Influence roadmap priority
-- Recruit design/PM/eng collaborators
-- Reframe a solution-led project around a better problem
-- Prepare for a leadership discussion
+Use when the ask is unclear. Ask what conversation the designer wants to create: align PM that the problem is worth discovery, influence roadmap priority, recruit collaborators, reframe a solution-led project, or prepare for a leadership discussion.
 
 ### Cluster D: scope boundaries
-Use when the concept is sprawling.
-
-Ask what should stay out of v0:
-- Specific solutions
-- Platform decisions
-- Resourcing asks
-- Implementation plan
-- Ownership decisions
+Use when the concept is sprawling. Ask what should stay out of v0: solutions, platform decisions, resourcing, implementation plan, ownership decisions.
 
 ### Cluster E: business grounding
 Use when the brief is observation-rich but lacks any business language.
@@ -126,7 +113,7 @@ Use this default structure:
 [The specific timing hook. What closes or gets harder if this waits two quarters.]
 
 ## Proposed next step
-[The specific action already in motion. What decision this conversation needs to produce. What we'll know by when. End with momentum — not a question about whether the problem is real.]
+[Name the action already in motion — not a meeting request, not a question about whether the problem is real. State: (1) who needs to make a decision, (2) what that decision is, and (3) what the designer will do by when. "I'm bringing this to [name] by [date] to get agreement that this is worth a 2-week discovery sprint before Q3 planning" is the right register. "Let's align on next steps" is not. End with momentum.]
 ```
 
 If any signals touch clinical outcomes, member safety, or care delivery, label them as observations or anecdotal — do not ask the designer to go pull data before drafting. The label is enough to set honest expectations with whoever reads it first.
@@ -150,13 +137,14 @@ Check:
 - Does "The problem" section describe a user experience, not just a user segment?
 - Does "Why it matters" name at least one metric, even directionally?
 - Are assumptions labeled as such in "What we know"?
-- Is the proposed next step an action already in motion, not a request for permission?
+- Is there enough signal to justify a conversation, not a roadmap commitment?
+- Does the proposed next step name a specific person, a specific decision, and a timeframe — or does it describe an activity? Flag if it's still a meeting request.
 - Is it short enough that the designer will actually share it?
 
 Return:
 1. What's working — the strongest part of the brief as written.
 2. One or two things to tighten before sharing, prioritized by impact.
-3. A nudge toward sharing: who's a good first reader and how to frame the ask.
+3. A nudge on socialization sequencing: who's a good first reader, why that order matters (PM before DM vs. the other way around isn't neutral), and how to frame the ask so sharing feels low-stakes.
 
 After returning the gate feedback, offer to export the brief directly to Google Docs. Use the working title to name the file (kebab-case, e.g. `provider-invoice-notification-gap.md`). If the user agrees:
 1. Write the brief as a markdown file to the `briefs/` subdirectory.
@@ -196,19 +184,7 @@ Add or strengthen:
 - Stakeholder-specific ask
 
 ### v2: roadmap-influence memo
-Add sections only when they help decision-making:
-- Executive summary
-- Success metrics
-- Context
-- Problem framing
-- Target state
-- Platform consideration
-- Resourcing
-- Proposed approach
-- Risks
-- Decision required
-
-Do not add these sections by default. Treat them as later-stage strategy-memo modules.
+Add only when it helps decision-making: executive summary, success metrics, target state, platform consideration, resourcing, proposed approach, risks, decision required. Add sections individually, not all at once.
 
 ## Output rules
 
