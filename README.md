@@ -91,19 +91,47 @@ Once a brief is drafted, the skill offers to export it directly to Google Docs a
 
 ### Option A: Google Cloud setup (recommended)
 
-One-time setup, then it's one command.
+One-time setup (~15 min), then export is a single command.
 
-1. Go to [Google Cloud Console](https://console.cloud.google.com) and create a project.
-2. Enable the **Google Docs API** and **Google Drive API** for that project.
-3. Under **APIs & Services → Credentials**, create an OAuth 2.0 Client ID (type: Desktop app). Download the JSON.
-4. Rename the file `credentials.json` and place it in this directory (next to `SKILL.md`).
-5. Install the Python dependencies:
+**Part 1 — Create a Google Cloud app**
+
+1. Go to [console.cloud.google.com](https://console.cloud.google.com) and sign in with your work Google account.
+2. Click the project dropdown (top left) → **New Project** → give it any name (e.g. `my-claude`) → **Create**.
+3. In the search bar, search **"Google Docs API"** → click it → **Enable**.
+4. Search **"Google Drive API"** → click it → **Enable**.
+5. In the left sidebar go to **APIs & Services → Credentials**.
+6. Click **+ Create Credentials → OAuth client ID**.
+7. If prompted to configure a consent screen first: choose **External**, fill in your app name and email, skip the rest, save. Then return to step 6.
+8. On "Create OAuth client ID": choose **Desktop app** → name it anything → **Create**.
+9. Click **Download JSON** on the popup → save the file somewhere you'll find it.
+
+**Part 2 — Add credentials to the project**
+
+10. Rename the downloaded file to `credentials.json` and place it in this directory (next to `SKILL.md`).
+11. Install the Python dependencies:
 
 ```bash
 pip3 install google-api-python-client google-auth-httplib2 google-auth-oauthlib
 ```
 
-The first export will open a browser for Google authorization. After that, credentials are cached at `~/.problem-brief-token.json` — no further auth needed.
+**Part 3 — Authorize (one-time)**
+
+The first export attempt will open a browser window asking you to sign in with Google and click Allow. After that, credentials are cached at `~/.problem-brief-token.json` — no re-auth needed going forward.
+
+If the browser window doesn't open automatically, run the export script directly from your terminal:
+
+```bash
+cd path/to/problem-brief
+python3 export_to_gdocs.py briefs/any-existing-brief.md
+```
+
+It will print an auth URL — open it in your browser, sign in, and click Allow. The token is then saved and subsequent exports work without any browser interaction.
+
+**Troubleshooting**
+
+- *"This app hasn't been verified" or "App not approved by your organization"* — This is a Google Workspace restriction. Your IT/admin team needs to allowlist the OAuth client ID. Share the `client_id` from your `credentials.json` when raising the ticket.
+
+- *Export fails silently or auth never completes* — The OAuth flow doesn't always trigger automatically in some terminal environments. Run the script directly in your terminal (as in Part 3 above) to manually complete authorization once, then try exporting from Claude Code again.
 
 ### Option B: Pandoc (fallback)
 
