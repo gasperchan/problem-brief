@@ -18,13 +18,12 @@ Strategic partnership starts before any tool is open. It starts with getting an 
 
 ## What it produces
 
-A v0 problem brief — a Google Doc-style memo a PM, design manager, or collaborator can read in two minutes and react to. Five sections:
+A v0 problem brief — a Google Doc-style memo a PM, design manager, or collaborator can read in two minutes and react to. Four sections:
 
-1. **The problem** — described through the user's experience, not their demographic category. This is where design's proximity to users shows up.
-2. **Why it matters** — which metric it most likely touches, what gets worse if nothing changes.
-3. **What we know** — evidence labeled by confidence, what's been tried, what's still unknown.
-4. **Why now** — the specific timing hook.
-5. **Proposed next step** — an action already in motion and the decision this conversation needs to produce.
+1. **What's breaking — and for who** — the specific moment the experience breaks down, described through the user's lived experience.
+2. **Why it costs us — stakes and timing** — which metric it most likely touches, what gets worse if nothing changes, and why now.
+3. **What we're seeing — observations and assumptions** — evidence labeled by confidence, what's been tried, what's still unknown.
+4. **Where I'm taking this — next steps and open questions** — an action already in motion, plus which assumptions still need validation.
 
 The brief is intentionally incomplete. The goal is to earn a conversation, not close one.
 
