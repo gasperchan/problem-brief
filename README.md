@@ -97,6 +97,8 @@ One-time setup (~15 min), then export is a single command.
 
 1. Go to [console.cloud.google.com](https://console.cloud.google.com) and sign in with your work Google account.
 2. Click the project dropdown (top left) → **New Project** → give it any name (e.g. `my-claude`) → **Create**.
+
+   ![Project dropdown in Google Cloud Console](docs/gcloud-project-dropdown.png)
 3. In the search bar, search **"Google Docs API"** → click it → **Enable**.
 4. Search **"Google Drive API"** → click it → **Enable**.
 5. In the left sidebar go to **APIs & Services → Credentials**.
