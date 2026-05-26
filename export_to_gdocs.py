@@ -19,7 +19,7 @@ from googleapiclient.discovery import build
 
 SCOPES = ["https://www.googleapis.com/auth/documents", "https://www.googleapis.com/auth/drive.file"]
 TOKEN_PATH = Path.home() / ".problem-brief-coach-token.json"
-CREDS_PATH = Path(__file__).parent / "credentials.json"
+CREDS_PATH = Path.home() / "skills" / "problem-brief" / "credentials.json"
 
 
 def get_credentials():

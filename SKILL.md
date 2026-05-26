@@ -144,8 +144,8 @@ Return:
 3. A nudge on socialization sequencing: who's a good first reader, why that order matters (PM before DM vs. the other way around isn't neutral), and how to frame the ask so sharing feels low-stakes.
 
 After returning the gate feedback, offer to export the brief directly to Google Docs. Use the working title to name the file (kebab-case, e.g. `provider-invoice-notification-gap.md`). If the user agrees:
-1. Write the brief as a markdown file to the `briefs/` subdirectory.
-2. Run `python3 export_to_gdocs.py briefs/[filename].md` from the problem-brief directory via Bash.
+1. Write the brief as a markdown file to the `briefs/` subdirectory of the current working directory, creating it if needed.
+2. Run `export_to_gdocs briefs/[filename].md` via Bash.
 3. The script will return a Google Docs URL — share it with the user.
 
 First-time setup: the script requires a `credentials.json` file from Google Cloud. If it's missing, tell the user to check the README for setup instructions. On first successful run, credentials are cached and no further auth is needed.
