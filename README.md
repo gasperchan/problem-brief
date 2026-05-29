@@ -6,13 +6,11 @@ A Claude Code skill for product designers who have observations, concerns, or hu
 
 ## Why this exists
 
-Designers have taste, judgment, and proximity to users — and often better reads on what's broken than the briefs they're handed. The gap isn't insight. It's time and structure.
+I believe designers have ideas. Good ones. The instinct is there. The insight is there. What's hard is the gap between having a hunch and doing something with it. Writing isn't my strong suit — but it's how decisions get made. So I built something for that, tested it on a strategy memo I don't know how I would've found the time to write otherwise, and it worked.
 
-Ideas stay fuzzy, stay in your head, or get lost before they reach anyone who can act on them. By the time they're structured enough to share, the roadmap conversation has already happened.
+We have taste, judgment, and proximity to users — often better reads on what's broken than the briefs we're handed. The gap isn't insight. It's time and structure. Ideas stay fuzzy, stay in your head, or get lost before they reach anyone who can act on them. By the time they're structured enough to share, the conversation has already happened.
 
-This skill collapses that gap. You dump what you know in rough form — fragments, anecdotes, Slack threads, half-formed hunches — and it helps you shape it into a **discovery proposal**: a lightweight, shareable doc that can start a product or roadmap conversation before anyone asks you to.
-
-Strategic partnership starts before any tool is open. It starts with getting an idea clear enough that other people can care about it. This is the method for making that count — on any project, in any sprint, any time you notice something worth solving.
+This collapses that gap. You dump what you know in rough form — fragments, a hunch, a Slack thread — and it shapes it into a **discovery proposal**: a lightweight, shareable doc that can start a product or roadmap conversation before anyone asks you to. Strategic partnership starts before any tool is open. This is the method for making that count.
 
 ---
 
